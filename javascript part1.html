@@ -1,0 +1,70 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript part 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="javascriptpart1.css" />
+    <!-- Below example is of javascript in external file tag -->
+    <script src="javascriptpart1.js"></script>
+    <!-- Below example is of javascript in head tag -->
+    <script>console.log("Alert from head tag")</script>
+</head>
+<body>
+        <div class="question">Q1.	What is javascript ? Why need of Javascript.</div> 
+        <p class="answer">Javascript is a scripting language which will run on the client side.
+            <br>We need the javascript to create the interactive web pages which will behave dynamically.
+        </p>
+
+        <div class="question">Q2.	How many ways we can add javascript , create program.</div> 
+        <p class="answer">Javascript can be added in HTML by 3 ways.
+            <ol><li>Inside head of the page</li><li>Inside the body of the page</li><li>External javascript</li></ol>
+        </p>
+        <!-- Below example is of javascript in body tag -->
+        <script>console.log("Alert from body tag")</script>
+
+        <div class="question">Q3.	Write code for example for innerHTML and innerText , document.write. What is difference between innerHTML and innerText.</div> 
+        <span id="textDisplay"><b>innerHTML example</b></span>
+        <button id="buttonId1" onclick=displayId()>Get ID</button>
+        <p class="answer">Difference between innerHTML and innerText is, innerHTML will access the content of element including HTML tags. innerText will access the plain text only and tags will not accessed.</p>
+        <button id="buttonId2" onclick=printText()>write text</button>
+        <div class="question">Q4. How many ways we can add comment in javascript</div> 
+        <p class="answer">There are 2 ways to add the comment in code. <br/>1. Single line comment i.e. by // <br/>2. Multi-line /* some code here */</p>
+
+        
+        <div class="question">Q5. How many way we can create variables in javascript, give name convention for javascript variable.</div> 
+        <p class="answer">We can create variables by using var keyword.
+            <br/>There are few general rules to create variable:<br/>
+            1. Variable names should contain letter, digits and underscore and dollar signs<br/>
+            2. Name should always start with letter<br/>
+            3. Reserved keywords cannot be used for variable names.
+        </p>
+        
+        <div class="question">Q6. What is hoisting in javascript ? What is advantages and disadvantages for hoisting.
+                How we can avoid that</div> 
+        <p class="answer">Hoisting is default behavious of Javascript's of moving declarion of all the variable at top of the current scope before code execution. <br/>we can use the variable before it is getting declared or without declaring it, we can assign value to the variable<br/>
+        <br>Advantages:<br/>script will not throw and error even if you have missed to declare any variable and assigned value to it.
+            <br/>disadvantages: all variables which are hoisted are getting created at the global scope, so those can be accessible globally.
+        </p>
+
+        <div class="question">Q7. How many Datatypes in javascript give examples </div> 
+        <p class="answer">There are 2 main Datatypes<br/>
+            Primitive datatypes:
+            <ul>
+                <li>String</li>
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>Undefined</li>
+            </ul>
+            Non-primitive (complex) Datatypes:
+                <ul>
+                    <li>Object</li>
+                    <li>Functions</li>
+                </ul>
+        </p>
+
+
+
+    </body>
+</html>
