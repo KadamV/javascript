@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript assignment part 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="jspart2.css" />
+    <script src="jspart2.js"></script>
+</head>
+<body>
+    <div class="question">Q8.   What is difference between isFinite() and isInteger </div>
+    <p class="answer">isFinite() method determines whether the passed value is a finite number.<br/>
+                    isInteger() method determines whether the passed value is an integer.
+    </p>
+
+    <div class="question">Q9 .Give example for toFixed and toPrecision</div>
+    <p class="answer">Example of toFixed: It defines the number of digits after decimal point.</p>
+        <p class="codeText"><code>            
+                var fNumber = 12.345678;<br/>
+                fNumber.toFixed(2);
+                <br/><!-- output will be 12.35 -->            
+        </code>
+        </p>
+    <p class="answer">Example of toPrecision: It defines the number of digits from whole number. i.e. length of number.</p>
+            <p  class="codeText"><code>            
+                    var fNumber = 12.345678;<br/>
+                    fNumber.toPrecision(5);
+                    <br/><!-- output will be 12.346 -->            
+            </code>
+        </p>
+    
+    <div class="question">Q10.  What is number data type and how many types it can hold. </div>
+    <p class="answer">Number datatype stores the number values. Number has only one type.</p>
+    
+    <div class="question">Q11. What is string give examples for String type.</div>
+    <p class="answer">String datatype stores the series of characters. It is any text inside double or single quotes.<br/>
+        Example1:
+            Var str1= "Vishwajeet Kadam"
+        <br/>Example2:
+            Var str2= "abc123_xyz"
+    </p>
+    
+    <div class="question">Q12.  Get 2nd  ‘A’ character from “I am from Angular Avengers” using charAt </div>        
+    <i>(Note:Please refer displayText() function in jspart2.js file to see code)</i><br/>    
+    <button onClick="displayText()">Click to get the result</button>
+    
+    <div class="question">Q13.  Get ascii code for  ‘A’ character from “I am from Angular Avengers”.</div>
+    <i>(Note:Please refer displayAsciiText() function in jspart2.js file to see code)</i><br/>
+    <button onClick="displayAsciiText()">Click to get the Ascii code</button>
+    
+    <div class="question">Q14. Combine below string.</div>
+    <p class="codeText">Looks inputs missing....so used own example<br/>
+            var fName="Vishwajeet";<br/>
+            var lName="Kadam";<br/>
+            fName.concat(lName);<br/>
+            //output = VishwajeetKadam
+    </p>
+   
+    <div class="question">Q15. Write program to Check if “Angular ”  is part of give string   “I am from Angular Avengers”.</div>
+    <i>(Note:Please refer checkResult() function in jspart2.js file to see code)</i><br/>
+    <button onClick="checkResult()">Click to get the result</button></div>
+    
+    <div class="question">Q16. what is difference between lastIndexOf and indexOf write program.</div>
+    <p class="answer">indexOf() returns the position of the first occurrence of a specified value in a given string.<br/>
+        lastIndexOf() returns the position of the last occurrence of a specified value in a given string.
+    </p>
+
+    <div class="question">Q17. What is replace,search.</div>
+    <p class="answer">replace: Replace method search for a specified value and retruns the new string by replacing the specified values by given value to replace<br/>
+        search: Search method search for a specified value and retruns position of the match.
+    </p>
+    <div class="question">Q18. Get ‘Angular’ from “I am from Angular Avengers” using slice method</div>
+    <i>(Note:Please refer checkSlice() function in jspart2.js file to see code)</i><br/>
+    <button onClick="checkSlice()">Click to get the result</button></div>
+    <div class="question">Q19. Get ‘Angular’ from “I am from Angular Avengers” using substring method</div>
+    <i>(Note:Please refer checkSubString() function in jspart2.js file to see code)</i><br/>
+    <button onClick="checkSubString()">Click to get the result</button></div>
+    <div class="question">Q20. Get ‘Angular’ from “I am from Angular Avengers” using substr method</div>
+    <i>(Note:Please refer checkSubStr() function in jspart2.js file to see code)</i><br/>
+    <button onClick="checkSubStr()">Click to get the result</button></div>
+    <div class="question">Q21. What is difference between slice substr and substring method. </div>
+    <p class="answer">slice: This method returns the part of string as a new string.<br/>
+        substr: This method returns the part of string from given starting position (index) to the number of characters given.<br/>
+        substring: This method returns the characters in between to indices of the input string.
+    </p>
+    <div class="question">Q22. get Get ‘Angular’ from “I am from Angular Avengers” using substring negative start and end.</div>
+    <p class="answer">substring: This method doesn't accept the negative index. Any argument value that is less than 0 or greater than length os string is treated as if it were 0 and length of String respectively</p>
+    
+    <div class="question">Q23. Write function to get sum of 2 numbers.</div>
+    <i>(Note:Please refer sum() function in jspart2.js file to see code)</i><br/>
+    4 + 5 <button onclick="sum()">=</button> <span id="total"></span>
+
+    <div class="question">Q24. Give examples for below operator(give 5 example for all)<br/>= ,+= ,-= ,*= ,/= ,%= </div>
+    Number1=5
+    Number2=? 
+    
+    <ol>
+        <li><button onclick="claculate()">Number2=Number1</button> <span id="displayResult1"></span></li>
+        <li><button onclick="claculate()">Number2+=Number1</button><span id="displayResult2"></span></li>
+        <li><button onclick="claculate()">Number2-=Number1</button><span id="displayResult3"></span></li>
+        <li><button onclick="claculate()">Number2*=Number1</button><span id="displayResult4"></span></li>
+        <li><button onclick="claculate()">Number2%=Number1</button><span id="displayResult5"></span></li>
+    </ol>       
+    
+    <div class="question">Q25. Give examples for below operator (give 5 examples). == ,===,!= ,!==,>  ,<  ,>= ,<= ,?</div>
+    Enter first number : <input id="firstNumber" type="number"><br>
+    Enter second number: <input id="secondNumber" type="number"><br/>
+    <button onclick="checkOperator()">Get results</button><br/>
+    Result for '==' : <span id="getResult1"></span><br/>
+    Result for '===' : <span id="getResult2"></span><br/>
+    Result for '!=' : <span id="getResult3"></span><br/>
+    Result for '!==' : <span id="getResult4"></span><br/>
+    Result for '>' : <span id="getResult5"></span><br/>
+    Result for '<' : <span id="getResult6"></span><br/>
+    Result for '>=' : <span id="getResult7"></span><br/>
+    Result for '<=' : <span id="getResult8"></span><br/>
+    Result for '?' : <span id="getResult9"></span><br/>
+
+
+    <div class="question">Q26. What is difference between == and === ? when this is useful.</div>
+    <p class="answer">== compare values of 2 variables and return true if values are equal.</p>
+    <p class="answer">=== compare values of 2 variables as well as datatype of varibles and return true if both are equal.</p>
+</body>
+</html>
