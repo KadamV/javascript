@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS part 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="jspart3.css" />
+    <script src="jspart3.js"></script>
+</head>
+<body>
+    <div class="question">Q27. What will be output for this and why? </div>
+    <div class="question">Q1.	‘A’==’a’</div>
+    <p class="answer">Answer: False, because javascript is case sensitive and both letters are having different case.</p>
+    <div class="question">Q2.	‘1’===1</div>
+    <p class="answer">Answer: False, because === operator will compare the value as well as type of the inputs and as '1' is string and 1 is number, answer will false.</p>
+    <div class="question">Q3.	false==true;</div>
+    <p class="answer">Answer: False, because == operator will compare the values and these 2 different values of boolean datatype.</p>
+    <div class="question">Q4.	0==false</div>
+    <p class="answer">Answer: true, because in JavaScript logic, 0 and null/undefined values are equivalent to false. </p>
+    <div class="question">Q5.	0===false</div>
+    <p class="answer">Answer: false, === operator will compare the value as well as type of the inputs and as 0 is number and 'false' is boolean type, answer will false.</p>
+    <div class="question">Q6.	null==undefined.</div>
+    <p class="answer">Answer: true, because in JavaScript logic, null and undefined values are equivalent to false. </p>
+    <div class="question">Q7.	null===undefined</div>
+    <p class="answer">Answer: false, === operator will compare the value as well as type of the inputs and as null and undefined are of different datatype </p>
+    <div class="question">Q8.	5==’five’</div>
+    <p class="answer">Answer: False, because == operator will compare the values of the inputs and as 'five' is string and 5 is number, answer will false.</p>
+    <div class="question">Q9.	'This is test'=='this is test'</div>
+    <p class="answer">Answer: False, because javascript is case sensitive and both strings are having different case letters.</p>
+    <div class="question">Q10.	 typeOf null</div>
+    <p class="answer">Answer: Error, because javascript is case sensitive and correct case is typeof.</p>
+    <div class="question">Q11. What should be naming convention for variables. </div>
+    <p class="answer">Answer: Variable should contain letters, digits and some special characters like _, $.<br/> Variable names should always start with characters.<br/> case of variable name should be camel case.</p>
+    <div class="question">Q12 . give examples of logical operators(4 examples for each).</div>
+    <p class="answer">Answer:
+        <br/>1. && <br/>Example: 2<3 && 3<4 = true
+        <br/>2. || <br/>Example: 2<3 || 4<3 = true
+        <br/>3. ! <br/>Example: 3!=4 = true</p>
+    <div class="question">Q13. Give answer for below.. </div>
+    <div class="question">•	typeof {name:'John', age:34}</div>
+    <p class="answer">object</p>
+    <div class="question">•	typeof  [1,2,3,4,5]</div>
+    <p class="answer">object</p>
+    <div class="question">•	typeof 5</div>
+    <p class="answer">number</p>
+    <div class="question">•	typeof ‘x’</div>
+    <p class="answer">string</p>
+    <div class="question">•	 typeof false</div>
+    <p class="answer">boolean</p>	
+    <div class="question">Q14. Give examples for Javascript function and how many ways we can create function. </div>
+    <p class="answer">Example: function sum(a,b){<br/>
+        var total;<br/>
+        total=a+b;<br/>
+        console.log(total);<br/>
+        } </p>
+        <p class="answer">Ways to create function:
+            <ul>
+                <li>Anonymous functions</li>
+                <li>invoked functions</li>
+                <li>Named function declaration</li>
+                <li>Returned functions</li>
+            </ul>
+        </p>
+    <div class="question">Q15.  How to invoke function. </div>
+    <p class="answer">The code inside the function will execute when any event calls (invokes) the function.</p>
+    <div class="question">Q16. What is return in function.</div>
+    <p class="answer">return will stop the execution of the function and returns the value to which function is called.</p>
+    <div class="question">Q17. what is anonymous function, benefits of using anonymous functions</div>
+    <p class="answer">Anonymous is the function which doesn't have the name for it. Those are created runtime. They can be invoked by viriable name. </p>
+    <div class="question">Q18. What is use of function and benefits of using function.</div>
+    <p class="answer">Using function we can perform multiple opearations using same code. We can reuse the code multiple times</p>
+    <div class="question">Q19.  What is javascript scope. Give examples for local and global storage.</div>
+    <p class="answer">Javascript scope determines the visibility of the variables.<br/>
+        var a=10 //This variable has global scope.<br/>
+        function getUserDetails(){<br/>              
+            console.log(a);<br/>
+            a=5 //This variable has a local scope to this function.<br/>
+            };<br/>
+    getUserDetails()</div></p>
+    <div class="question">Q20. What is declaration of variable in javascript.</div>
+    <p class="answer">Declaration of variables means allocation memory space in the scope of that variable.</p>
+    <div class="question">Q21  what will be output for below code, give reason for answer..</div>
+    <div class="question">    1.	console.log(a);</div>
+        <p class="answer">Error, as this is write operation</p>
+    <div class="question">    2.	a= 10;console.log(a)</div>
+        <p class="answer">10</p>
+    <div class="question">    3.	var a= 10<br/>
+        function sum(){<br/>
+        console.log(a);<br/>
+        var a; <br/>
+        }  </div>
+        <p class="answer">undefined as function not called.</p>
+    <div class="question">    4. var b= 10;<br/>
+            function getUserDetails(){<br/>
+                console.log(a)<br/>
+                var a=10<br/>
+                }[]<br/>
+        getUserDetails()</div>
+        <p class="answer">undefined as variable a assigned 'a' value after it is getting logged.</p>
+    <div class="question">    5.  var a= 10;<br/>
+            function getUserDetails(){<br/>
+                var a=10<br/>  
+                console.log(a);<br/>
+                a=5<br/>
+                };<br/>
+        console.log(a);<br/>
+        getUserDetails()</div>
+        <p class="answer">10</p>
+        <p class="answer">10</p>
+    <div class="question">6.  b= 10
+        <br/>function getUserDetails(){
+        <br/>Return 0
+        <br/>var a= 10;
+        <br/>console.log(a)
+        <br/>}
+        <br/>getUserDetails()</div>
+        <p class="answer">Will be an error, as 'R' of return keuword is capital.</p>
+        <div class="question">7. var a=50;
+        <br/>function getUserDetails(){
+            <br/>console.log(a)
+            <br/>}</div>
+        <p class="answer">Nothing will be printed as function not called.</p>
+    <div class="question">22. What is object and use of object. What will be type of objects.</div>
+        <p class="answer">Objects is collection of named values. Object is a real time entity, like car, person etc.<br/>Single object and obejct constructor are type of objects.</p>
+    <div class="question">How many ways we can create object in  javascript.</div>
+        <p class="answer"><ul>
+            <li>Using an object lateral</li>
+            <li>With the keyword 'new'</li>
+            <li>Define a object constructor and create objects of the constructed type.</li>
+        </ul></p>    
+</body>
+</html>
