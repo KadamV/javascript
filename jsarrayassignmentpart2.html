@@ -30,8 +30,8 @@ should be like this:
 <br/>var flag=0;
 <br/>numberArray1.reduce(getNum);
 <br/>function getNum(total, num) {
-<br/>  if (total%2==0 && flag=0){arrayEven.push(total);flag=1};
-<br/>  if (total%2!=0 && flag=0){arrayOdd.push(total);flag=1};
+<br/>  if (total%2==0 && flag==0){arrayEven.push(total);flag=1};
+<br/>  if (total%2!=0 && flag==0){arrayOdd.push(total);flag=1};
 <br/>  if (num%2==0){arrayEven.push(num);}
 <br/>  else{arrayOdd.push(num);}; 
 }
@@ -57,28 +57,40 @@ should be like this:
 <div class="answer">var array3=[1,2,4,5,11,12,22,23,31]<br/>
         array3.some(function(v){return v>50})</div>
 <div class="question"> 7. What is Date , what will be type of date?</div>
-<div class="answer">Date represents a single moment in time. There are 3 types of date format:<br/>
-    ISO Date "2015-03-25" (The International Standard)<br/>
-    Short Date "03/25/2015"<br/>
-    Long Date "Mar 25 2015" or "25 Mar 2015"<br/>
+<div class="answer">Date represents a single moment in time. <br/>
+    type of Date is Object<br/>
 </div>
 <div class="question"> 8. Get value in mm/dd/yy from current date.</div>
-<div class="answer"><br/>var today = new Date();
-    <br/>var dd = today.getDate();
-    <br/>var mm = today.getMonth() + 1;
-    <br/>var yy = today.getFullYear().toString().substr(-2);
-    <br/>today = mm+"/"+dd+"/"+ yy;</div>
+<div class="answer"><br/>var today = new Date();   
+<br/>today = (today.getMonth() + 1) +"/"+today.getDate()+"/"+ today.getFullYear().toString().substr(-2);</div>
 <div class="question"> 9. Find max value from [1,2,4,5,11,12,22,23,31]</div>
-<div class="answer">var maxVal = Math.max(1,2,4,5,11,12,22,23,31)</div>
+<div class="answer">var maxVal = Math.max(1,2,4,5,11,12,22,23,31);<br/>
+        var max=0;<br/>
+        maxVal.forEach(function(v,i,a){<br/>
+        if(max<v){<br/>
+        max=v;<br/>
+        return max;<br/>
+        }<br/>
+        })<br/>        
+        console.log(max)
+</div>
 <div class="question"> 10. Find min values from [1,2,4,5,11,12,22,23,31]</div>
-<div class="answer">var minVal = Math.min(1,2,4,5,11,12,22,23,31)</div>
+<div class="answer">var minVal = [1,2,4,5,11,12,22,23,31];<br/>
+        var min=999;<br/>
+        minVal.forEach(function(v,i,a){<br/>
+        if(min>v){<br/>
+        min=v;<br/>
+        return min;<br/>
+        }<br/>
+        })<br/>     
+        console.log(min)</div>
 <div class="question"> 11. What is use of Random function , write code to get random values from 0 to 9;</div>
 <div class="answer">Random function returns a random number between 0 (inclusive), and 1 (exclusive)
-    <br/>function getRandomInt(max) {
-    <br/>  return Math.floor(Math.random() * Math.floor(max));
+    <br/>function getRndInteger(min, max) {
+    <br/>  return Math.floor(Math.random() * (max - min) ) + min;
     <br/>}
             
-    <br/>var ranNum = getRandomInt(9);
+    <br/>var ranNum = getRndInteger(0,10);
 </div>
 <div class="question"> 12. What is ceil and floor function and what is use of them.</div>
 <div class="answer">ceil method rounds a number UPWARDS to the nearest integer, and returns the result.<br/>
